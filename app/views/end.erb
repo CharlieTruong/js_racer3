@@ -1,0 +1,10 @@
+<h1>Results</h1>
+<p><%= "#{@game.winner}" %> is the winner!</p>
+<p><%= "#{@game.time}" %> is the time!</p>
+
+<% Game.all.each do |g|%>
+  <a href="/end/<%="#{g.id}"%>">Game number: <%="#{g.id}"%></a><br>
+<%end%>
+
+<a href="/">Home</a>
+
